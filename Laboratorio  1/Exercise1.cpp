@@ -1,30 +1,34 @@
 #include <iostream>
-
+#include <cmath>
 using namespace std;
-int function(int a);
+
+int fun1(int a);
+bool fun2(int num);
 
 int main(){
-    int valor=0;
+    int value=0;
     int limit=100;
-    valor=function(limit);
-    cout <<"La suma de todos los numeros primos es de: "<<valor<<endl;
+    value=fun1(limit);
+    cout <<"\nLa suma de todos los numeros primos es de: "<<value<<"\n"<<endl;
 }
 
-int fuction(int a){
+int fun1(int a){
     int add=0;
-    bool primo=true;
    for (int i = 2; i < a; i++)
    {
-       if (a%2==0)
+       if (fun2(i) == true)
        {
-           primo = false;
-       }
-       else{
-           add +=i;
-       }      
-       
+           add+=i;
+       }    
    }
-   
    return add;
+}
 
+bool fun2(int n){
+    for(int i = 2; i <= sqrt(n); i++){
+        if(n % i == 0){
+            return false;
+        }
+    }
+    return true;
 }

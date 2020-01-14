@@ -3,7 +3,7 @@
 using namespace std;
 
 int fun1(int a);
-bool fun2(int num);
+bool fun2(int n);
 
 int main(){
     int value=0;
